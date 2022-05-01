@@ -1,16 +1,19 @@
 package objects;
 import states.Color;
 import states.Survival;
-
+import states.Position;
 import java.util.HashMap;
 
 public abstract class Piece {
     //Prototype for all pieces
 
     // Current Position
-    private HashMap<Integer,Integer> position;
-    private final Color color;
-    private final Survival survival;
+    protected Position position;
+    protected Color color;
+    protected Survival survival;
+    protected final Board board = new Board();
+
+    protected Piece(){}
 
     Piece(Color color, Survival survival){
         this.color = color;
@@ -18,8 +21,8 @@ public abstract class Piece {
     }
 
     // Getter
-    public HashMap<Integer,Integer> getPosition(){return this.position;}
-    public Player getPlayer(){ return this.player;}
+    public Position getPosition(){return this.position;}
+    public Color getColor(){ return this.color;}
     public Survival getSurvival(){ return this.survival;}
 
     // Setter
@@ -27,5 +30,5 @@ public abstract class Piece {
 
     // Validation
     // Check if position entered is valid.
-    abstract boolean validation(int x, int y);
+    public abstract boolean validation(int x, int y);
 }
