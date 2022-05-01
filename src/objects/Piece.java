@@ -1,4 +1,5 @@
 package objects;
+import states.Color;
 import states.Survival;
 
 import java.util.HashMap;
@@ -8,11 +9,11 @@ public abstract class Piece {
 
     // Current Position
     private HashMap<Integer,Integer> position;
-    private final Player player;
+    private final Color color;
     private final Survival survival;
 
-    Piece(Player player, Survival survival){
-        this.player = player;
+    Piece(Color color, Survival survival){
+        this.color = color;
         this.survival = survival;
     }
 

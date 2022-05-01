@@ -1,5 +1,5 @@
 package states;
 
-public enum Side {
+public enum Color {
     WHITE, BLACK
 }

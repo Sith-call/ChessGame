@@ -1,7 +1,7 @@
 package objects;
 
-import states.Side;
+import states.Color;
 
 public record Player(
-        Side side
+        Color side
 ) { }
