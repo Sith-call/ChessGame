@@ -17,9 +17,7 @@ public abstract class Piece {
     }
 
     // Getter
-    public HashMap<Integer,Integer> getPosition(){
-        return this.position;
-    }
+    public HashMap<Integer,Integer> getPosition(){return this.position;}
     public Player getPlayer(){ return this.player;}
     public Survival getSurvival(){ return this.survival;}
 
